@@ -20,9 +20,12 @@ uint8_t Efficiency = 80;
 extern uint8_t Efficiency_High;
 extern uint8_t Efficiency_Low;
 uint8_t Light_Fre = 0;
+uint8_t Key_Pressed = 0;
 extern uint8_t RX_DFLAG;
 extern uint8_t TERMINAL_FLAG;
 extern uint16_t  Timer_1s;
+uint8_t Protect_Flag = 0;
+extern uint8_t Key_Released;
 void Key_Init(void)
 {
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);
@@ -59,12 +62,18 @@ void Key_Init(void)
 		GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource10);
 		
 		EXTI_InitTypeDef EXTI_InitStructure;
-		EXTI_InitStructure.EXTI_Line=EXTI_Line12|EXTI_Line13|EXTI_Line14|EXTI_Line15|EXTI_Line8;
+		EXTI_InitStructure.EXTI_Line=EXTI_Line12|EXTI_Line13|EXTI_Line14|EXTI_Line8;
 		EXTI_InitStructure.EXTI_LineCmd=ENABLE;
 		EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt;
 		EXTI_InitStructure.EXTI_Trigger=EXTI_Trigger_Rising;
 		EXTI_Init(&EXTI_InitStructure);
 		
+		EXTI_InitStructure.EXTI_Line=EXTI_Line15;
+		EXTI_InitStructure.EXTI_LineCmd=ENABLE;
+		EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt;
+		EXTI_InitStructure.EXTI_Trigger=EXTI_Trigger_Rising_Falling;
+		EXTI_Init(&EXTI_InitStructure);
+
 		EXTI_InitStructure.EXTI_Line=EXTI_Line10;
 		EXTI_InitStructure.EXTI_LineCmd=ENABLE;
 		EXTI_InitStructure.EXTI_Mode=EXTI_Mode_Interrupt;
@@ -121,16 +130,28 @@ void EXTI15_10_IRQHandler(void)
 		}
 		if(EXTI_GetITStatus(EXTI_Line15)==SET)
 	  	{
+			TIM2_Init();
+	    	while(TIMER <= Delay_time){};
 			if(Mode_Flag != 0)
 			{
-				Key_Pressed = 1;
+				if(Protect_Flag == 0)
+				{
+					Key_Pressed = 1;
+				}
 			}
-		    TIM2_Init();
-	    	while(TIMER <= Delay_time){};
-			switch(RX_DFLAG){
-				case 1 : Mode1_menu(); break;
-				case 2 : Mode2_menu(); break;
-				case 3 : Mode3_menu(); break;
+			else if(Mode_Flag == 0 && Key_Released == 1)
+			{
+				Key_Pressed = 0;
+				Key_Released = 0;
+			}
+			else if(Mode_Flag == 0)
+			{
+				Protect_Flag = 1;
+				switch(RX_DFLAG){
+					case 1 : Mode1_menu(); break;
+					case 2 : Mode2_menu(); break;
+					case 3 : Mode3_menu(); break;
+				}
 			}
 			TIMER = 0;
         	TIM2_DISABLE();

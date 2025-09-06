@@ -20,10 +20,14 @@ extern  uint8_t  Wave_Level;
 extern  uint8_t  Wave_Frequency;
 extern  uint16_t  Timer_1s;
 extern  uint8_t  Power_level;
+extern  uint8_t  Key_Pressed;
+extern  uint8_t  Protect_Flag;
+uint8_t Key_Released = 0;
 //extern  uint8_t  Current_Count;
 uint8_t Power_pecent;
 uint8_t TERMINAL_FLAG = 0;
 uint8_t Send_Flag = 0;
+uint8_t Pressed_Time = 0;
 
 int main(void)
 {	
@@ -47,6 +51,7 @@ int main(void)
 	if(TERMINAL_FLAG == 1)
 	{
 		TERMINAL_FLAG = 0;
+		Mode_Flag=0;
 		TIM3_DISABLE();
 		TIM4_DISABLE();
 		Light_Efficiency(0);
@@ -66,13 +71,12 @@ int main(void)
 		uint8_t Power_pecent=Power_Num();
 
 		snprintf(TimeString, TIME_STRING_LEN, 
-             "%04d/%02d/%02d %02d:%02d:%02d",
+             "%04d/%02d/%02d %02d:%02d",
              rtc_time.year,
              rtc_time.month,
              rtc_time.day,
              rtc_time.hour,
-             rtc_time.minute,
-             rtc_time.second);
+             rtc_time.minute);
 
     // 发送时间字符串到串口屏
     	printf("va0.txt=\"%s\"\xff\xff\xff", TimeString);
@@ -91,7 +95,28 @@ void TIM1_UP_IRQHandler(void)
 {
     if (TIM_GetITStatus(TIM1, TIM_IT_Update) == SET)
     {
+		static uint8_t Protect_count = 0;
         Send_Flag = 1;
+		if(Protect_Flag == 1)
+		{
+			Protect_count ++;
+			if(Protect_count >= 2)
+			{
+				Protect_Flag = 0;
+			}
+		}
+		if(Key_Pressed == 1)
+		{
+			Pressed_Time ++;
+			if(Pressed_Time >4)
+			{
+				Key_Released  = 1;
+				TERMINAL_FLAG = 1;
+				Pressed_Time  = 0;
+				Timer_1s = 1;
+				printf("page 1\xff\xff\xff");
+			}
+		}
         TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
     }
 }

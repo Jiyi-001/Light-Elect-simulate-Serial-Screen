@@ -44,7 +44,7 @@ uint8_t Power_Num(void)
 	uint8_t Power_Num;
 	Power = (float)(AD_GetValue() * 9.9 / 4096) ;
 	//(AD_GetValue()/4096 * 3.3*3)
-	Power_Num = (Power - 3.7) * 200;
-    //使用了4.2-3.7V得电池
+	Power_Num = (Power - 3.8) * 333;
+    //使用了4.1-3.8V得电池
     return Power_Num;
 }
