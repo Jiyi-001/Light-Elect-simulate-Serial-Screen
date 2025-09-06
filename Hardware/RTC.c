@@ -43,7 +43,7 @@ uint8_t RTC_Init(void)
         RTC_WaitForLastTask();
         
         // 初始化时间为2025年8月9日17:20:00
-        RTC_Set_Time(2025,8,9,17,20,00);
+        RTC_Set_Time(2025,9,8,10,20,00);
         
         // 标记已经初始化过
         BKP_WriteBackupRegister(BKP_DR1, 0x5050);
