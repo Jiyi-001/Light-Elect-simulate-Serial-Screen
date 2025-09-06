@@ -1,0 +1,15 @@
+#ifndef __DAC53401_REG_H
+#define __DAC53401_REG_H
+
+#define STATUS 0xD0
+#define GENERAL_CONFIG 0xD1
+#define MED_ALARM_CONFIG 0xD2
+#define TRIGGER 0xD3
+#define DAC_DATA 0x21
+#define DAC_MARGIN_HIGH 0x25
+#define DAC_MARGIN_LOW 0x26
+#define PMBUS_OP 0x01
+#define PMBUS_STATUS_BYTE 0x78
+#define PMBUS_VERSION 0x98
+
+#endif

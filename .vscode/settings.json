@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "menu.h": "c",
+        "timer.h": "c",
+        "oled.h": "c",
+        "dac53401.h": "c",
+        "stm32f10x.h": "c"
+    }
+}
