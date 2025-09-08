@@ -128,7 +128,7 @@ void EXTI15_10_IRQHandler(void)
 				TIM2_DISABLE();
 				EXTI_ClearITPendingBit(EXTI_Line14);
 		}
-		if(EXTI_GetITStatus(EXTI_Line15)==SET)
+		if(EXTI_GetITStatus(EXTI_Line15)==SET)   //确认键
 	  	{
 			TIM2_Init();
 	    	while(TIMER <= Delay_time){};
@@ -175,14 +175,17 @@ void EXTI15_10_IRQHandler(void)
 
 void EXTI9_5_IRQHandler(void)
 {
-    if(EXTI_GetITStatus(EXTI_Line8)==SET)
+    if(EXTI_GetITStatus(EXTI_Line8)==SET) //下键
 	{
 		TIM2_Init();
 		while(TIMER <= Delay_time);
+/*
 		TERMINAL_FLAG = 1;
 		Timer_1s = 1;
 		printf("page 1\xff\xff\xff");
+*/
         TIMER = 0;
+		printf("click b0,1\xff\xff\xff");
 		TIM2_DISABLE();				
 		EXTI_ClearITPendingBit(EXTI_Line8);	
 	}
