@@ -1,7 +1,7 @@
 .\objects\oled.o: Hardware\OLED.c
 .\objects\oled.o: .\start\stm32f10x.h
 .\objects\oled.o: .\start\core_cm3.h
-.\objects\oled.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\oled.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled.o: .\start\system_stm32f10x.h
 .\objects\oled.o: .\User\stm32f10x_conf.h
 .\objects\oled.o: .\Library\stm32f10x_adc.h
@@ -31,7 +31,7 @@
 .\objects\oled.o: Hardware\OLED.h
 .\objects\oled.o: Hardware\OLED_Data.h
 .\objects\oled.o: Hardware\timer.h
-.\objects\oled.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\string.h
-.\objects\oled.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\math.h
-.\objects\oled.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
-.\objects\oled.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdarg.h
+.\objects\oled.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\string.h
+.\objects\oled.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\math.h
+.\objects\oled.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\oled.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdarg.h

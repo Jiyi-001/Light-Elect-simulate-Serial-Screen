@@ -1,7 +1,7 @@
 .\objects\serial.o: Hardware\Serial.c
 .\objects\serial.o: .\start\stm32f10x.h
 .\objects\serial.o: .\start\core_cm3.h
-.\objects\serial.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\serial.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\serial.o: .\start\system_stm32f10x.h
 .\objects\serial.o: .\User\stm32f10x_conf.h
 .\objects\serial.o: .\Library\stm32f10x_adc.h
@@ -28,7 +28,7 @@
 .\objects\serial.o: .\Library\stm32f10x_usart.h
 .\objects\serial.o: .\Library\stm32f10x_wwdg.h
 .\objects\serial.o: .\Library\misc.h
-.\objects\serial.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
-.\objects\serial.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdarg.h
+.\objects\serial.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\serial.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\serial.o: .\System\Delay.h
 .\objects\serial.o: Hardware\Serial.h

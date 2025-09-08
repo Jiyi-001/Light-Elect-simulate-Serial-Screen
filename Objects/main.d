@@ -1,7 +1,7 @@
 .\objects\main.o: User\main.c
 .\objects\main.o: .\start\stm32f10x.h
 .\objects\main.o: .\start\core_cm3.h
-.\objects\main.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\main.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\start\system_stm32f10x.h
 .\objects\main.o: .\User\stm32f10x_conf.h
 .\objects\main.o: .\Library\stm32f10x_adc.h
@@ -37,6 +37,6 @@
 .\objects\main.o: .\Hardware\Key.h
 .\objects\main.o: .\Hardware\Power_probe.h
 .\objects\main.o: .\Hardware\Serial.h
-.\objects\main.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
+.\objects\main.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\Hardware\Beep.h
 .\objects\main.o: .\Hardware\RTC.h

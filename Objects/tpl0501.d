@@ -1,7 +1,7 @@
 .\objects\tpl0501.o: Hardware\TPL0501.c
 .\objects\tpl0501.o: .\start\stm32f10x.h
 .\objects\tpl0501.o: .\start\core_cm3.h
-.\objects\tpl0501.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\tpl0501.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tpl0501.o: .\start\system_stm32f10x.h
 .\objects\tpl0501.o: .\User\stm32f10x_conf.h
 .\objects\tpl0501.o: .\Library\stm32f10x_adc.h

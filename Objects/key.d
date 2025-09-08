@@ -1,7 +1,7 @@
 .\objects\key.o: Hardware\Key.c
 .\objects\key.o: .\start\stm32f10x.h
 .\objects\key.o: .\start\core_cm3.h
-.\objects\key.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\key.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\key.o: .\start\system_stm32f10x.h
 .\objects\key.o: .\User\stm32f10x_conf.h
 .\objects\key.o: .\Library\stm32f10x_adc.h
@@ -34,5 +34,5 @@
 .\objects\key.o: Hardware\timer.h
 .\objects\key.o: Hardware\TPL0501.h
 .\objects\key.o: Hardware\DAC53401.h
-.\objects\key.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
+.\objects\key.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\key.o: Hardware\Function.h

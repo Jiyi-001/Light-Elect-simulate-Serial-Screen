@@ -1,7 +1,7 @@
 .\objects\delay.o: System\Delay.c
 .\objects\delay.o: .\start\stm32f10x.h
 .\objects\delay.o: .\start\core_cm3.h
-.\objects\delay.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\delay.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\delay.o: .\start\system_stm32f10x.h
 .\objects\delay.o: .\User\stm32f10x_conf.h
 .\objects\delay.o: .\Library\stm32f10x_adc.h

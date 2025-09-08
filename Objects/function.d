@@ -1,6 +1,6 @@
 .\objects\function.o: Hardware\Function.c
 .\objects\function.o: Hardware\TPL0501.h
-.\objects\function.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\function.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\function.o: Hardware\DAC53401.h
 .\objects\function.o: Hardware\OLED.h
 .\objects\function.o: Hardware\OLED_Data.h
@@ -36,4 +36,4 @@
 .\objects\function.o: .\Library\stm32f10x_wwdg.h
 .\objects\function.o: .\Library\misc.h
 .\objects\function.o: Hardware\Key.h
-.\objects\function.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdio.h
+.\objects\function.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdio.h

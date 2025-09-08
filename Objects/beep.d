@@ -2,7 +2,7 @@
 .\objects\beep.o: Hardware\Beep.h
 .\objects\beep.o: .\start\stm32f10x.h
 .\objects\beep.o: .\start\core_cm3.h
-.\objects\beep.o: F:\Keil_v5\ARM\ARMCOMPLIER506\Bin\..\include\stdint.h
+.\objects\beep.o: D:\work_soft\Keil537\core\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\beep.o: .\start\system_stm32f10x.h
 .\objects\beep.o: .\User\stm32f10x_conf.h
 .\objects\beep.o: .\Library\stm32f10x_adc.h
